@@ -27,6 +27,16 @@ We run the weak labeling for six languages. The details of the corpus for each l
 
 [Público News]: https://drive.inesctec.pt/s/N4ETjmF4k2MNkEs/download/publico_news.zip
 
+## Reconstruct the Dataset
+
+In the `data/annotation` folder of this repository one can find the annotations produced by HeidelTime. These
+annotations
+are stored by language with a mapping from the document identifier to the expressions that were identified.
+
+To attain the original corpus for Portuguese and Spanish one has to run the scrapers available on the `publico_scraper`
+and `elmundo_scraper` repositories, respectively. The remaining docs can be easily downloaded by running 
+`sh data/download_raw.sh`.
+
 ## Run Annotations
 
 ### Setup development environment
@@ -55,7 +65,7 @@ sudo chmod 111 venv/lib/python3.8/site-packages/py_heideltime/Heideltime/TreeTag
 ### Download data
 
 ```shell
-sh data/download.sh
+sh data/download_raw.sh
 ```
 
 ### Run the annotation
